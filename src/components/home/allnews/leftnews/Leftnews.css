@@ -1,0 +1,7 @@
+.leftNewsPage {
+    width: 750px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}

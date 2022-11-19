@@ -1,0 +1,379 @@
+.yangPage {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.yangAllcard {
+  display: flex;
+}
+
+.newsPageUrl {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.newsPageUrl .PageAllUrl {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 17px;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.newsPageUrl .PageAllUrl:hover {
+  color: var(--noactive-text-color);
+}
+
+.yangCard {
+  width: 880px;
+  height: 1900px;
+  background-color: var(--frame-color);
+  border: 1px solid var(--frame-border-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+  padding: 20px;
+}
+
+.yangCardTitle {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.yangCardFilt {
+  display: none;
+  gap: 20px;
+  align-items: center;
+}
+
+.yangCardFilt span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.yangSelectTur {
+  width: 280px;
+  height: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--text-color);
+  background: none !important;
+  border: 0.5px solid var(--frame-border-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.yangSelectKun {
+  width: 190px;
+  height: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--text-color);
+  background: none !important;
+  border: 0.5px solid var(--frame-border-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.yangMenuItem {
+  border: none !important;
+  height: 30px !important;
+  background-color: #526e76;
+}
+
+/* Yangilik item code */
+
+.yangAllItemCard {
+  height: 1800px;
+  overflow-y: scroll;
+  margin-top: 20px;
+  width: 850px;
+}
+.yangAllItem {
+  width: 830px;
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.yangItemImg {
+  width: 260px;
+  height: 180px;
+  background-size: cover;
+  border: 1px solid var(--text-color);
+}
+
+.yangItemAboutCard {
+  width: 540px !important;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  margin-top: 2px;
+}
+
+.yangItemAboutCard .yangItemTextCard {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.yangItemTitle {
+  width: 540px;
+  height: 25px !important;
+  left: 0px;
+  top: 0px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: var(--text-color);
+  margin-top: 3px;
+}
+
+.yangItemBat {
+  font-style: normal;
+  font-weight: 300;
+  height: 35px !important;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  line-height: 18px;
+  color: var(--noactive-text-color);
+}
+.yangItemAboutCard a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: capitalize;
+  color: var(--sub-category-news);
+}
+
+.yangItemAboutCard a img {
+  height: 20px;
+  margin-bottom: 2px;
+  margin-right: 5px;
+}
+
+/* Yangilik item footer */
+.yangItemFoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.yangItemMuallifCrad {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.yangItemMuallif {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 7.5px;
+}
+
+.yangItemMualNameCard {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.yangItemMualName {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: justify;
+  color: var(--text-color);
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+}
+
+.yangItemMualNameCard span {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 110%;
+  color: var(--text-color);
+  display: flex;
+  align-content: flex-end;
+  gap: 5px;
+}
+
+.yangItemMualNameCard span h6 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: justify;
+  color: var(--noactive-text-color);
+  margin-top: 1px;
+}
+
+.yangRating {
+  font-size: 18px !important;
+  color: var(--rating-star) !important;
+}
+
+.yangItemSendCard {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.yangItemShare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.yangItemShare span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.yangItemShare span h6 {
+  margin-top: 2px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 110%;
+  letter-spacing: 1px;
+  text-align: justify;
+  text-transform: uppercase;
+  color: var(--noactive-text-color);
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.yangItemLikeCard {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+  align-items: center;
+}
+
+.yangItemLikeCard span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+  color: var(--noactive-text-color);
+  gap: 5px;
+}
+.yangItemLikeCard span svg {
+  fill: var(--noactive-text-color);
+}
+.yangItemLikeCard span h5 {
+  padding-top: 4px;
+}
+.yangItemMessen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+.yangItemMessen .linkBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yangItemMessen a i {
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  border-radius: 50%;
+  color: var(--icon-no-active);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yangBatLink {
+  display: flex;
+  align-items: flex-end !important;
+  height: 50px;
+}
+
+.yangBatLink svg {
+  margin-bottom: 3px;
+}
+
+/* Hover */
+.yangItemMessen a:hover svg {
+  transform: scale(1.2);
+}
+
+/* Line */
+.yangItemLine {
+  height: 1px;
+  width: 830px;
+  background-color: var(--frame-border-color);
+  margin: 10px 0;
+}
+
+.yangAllItemCard .yangAddBtnCard {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yangAddBtnCard .yangAdditem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 30px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--text-color);
+  background: none;
+  border: 1px solid var(--text-color);
+  gap: 12px;
+  cursor: pointer;
+}
+
+.yangAddBtnCard .yangAdditem span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4px;
+}
+
+/* Reklama */
+.yangRek {
+  width: 300px;
+  height: 1923px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+}

@@ -1,0 +1,261 @@
+.newsItemCard {
+  width: 840px;
+  height: 1165px;
+  background-color: var(--frame-color);
+  border: 1px solid var(--frame-border-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+  padding: 10px;
+}
+
+.newsItemTitle {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 32px;
+  letter-spacing: 1px;
+  color: var(--text-color);
+  padding: 0 10px;
+}
+
+.newsItemDataCard {
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.newsItemData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--noactive-text-color);
+}
+
+.newsItemDataItem {
+  display: flex;
+  gap: 5px;
+}
+
+.newsItemDataItem span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsItemDataItem svg {
+  margin-top: 2px;
+}
+
+.newsItemDataCard a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  color: var(--sub-category-news);
+}
+
+.mewsItem {
+  padding: 0 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 960px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: scroll;
+}
+
+.mewsItem .newsItemRich {
+  background: none;
+  border: none;
+}
+
+.mewsItem img {
+  width: 100%;
+}
+
+.mewsItem p a {
+  color: var(--sub-category-news);
+}
+
+.mewsItem p ul {
+  list-style: decimal;
+}
+
+.mewsItem p li {
+  list-style: inside;
+}
+
+.mewsItem p ol {
+  list-style: lower-alpha;
+}
+
+.mewsItem p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  color: var(--text-color);
+  text-align: justify;
+}
+
+.newsItemLine {
+  width: 800px;
+  height: 1px;
+  background-color: var(--frame-border-color);
+  margin: 10px;
+}
+
+.newsItemfooter {
+  width: 100%;
+  height: 50px;
+}
+
+.newsItemSocials {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.newsItemShare {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: justify;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.newsItemShare img {
+  margin-bottom: 5px;
+}
+
+.newsItemShare .newsItemMessen {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.newsItemMessen .ShareMes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsItemMessen a i {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #ffffff 0%, #c6c6c6 100%);
+  padding: 5px;
+  border-radius: 50%;
+  color: #557179;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsItemLikes {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  line-height: 22px;
+  color: var(--noactive-text-color);
+  cursor: pointer;
+}
+
+.newsItemComment {
+  height: 50px;
+  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  line-height: 22px;
+  color: var(--noactive-text-color);
+  cursor: pointer;
+}
+
+.newsItemLikes svg {
+  fill: var(--noactive-text-color);
+}
+
+.newsItemLikes span {
+  color: var(--noactive-text-color);
+  margin-top: 7px;
+}
+
+.newsItemLikes:hover span {
+  color: var(--text-color);
+  margin-top: 7px;
+}
+
+.newsItemLikes:hover svg {
+  fill: var(--text-color);
+}
+
+.newsItemComment svg {
+  fill: var(--noactive-text-color);
+}
+
+.newsItemComment:hover svg {
+  fill: var(--text-color);
+}
+
+.newsItemComment span {
+  color: var(--noactive-text-color);
+  margin-top: 7px;
+}
+
+.newsItemComment:hover span {
+  color: var(--text-color);
+  margin-top: 7px;
+}
+
+.newsItemSocials .newsAllRat {
+  margin-left: 10px;
+  font-size: 25px;
+  color: var(--rating-star);
+}
+
+.SendingLikeRating {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 5px;
+}

@@ -1,0 +1,7 @@
+.newItemLeft {
+  width: 840px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

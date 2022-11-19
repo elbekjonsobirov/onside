@@ -1,0 +1,235 @@
+.swTortPage {
+  width: 100%;
+  height: 390px;
+  padding: 10px;
+  background: var(--frame-color);
+  border: 1px solid var(--frame-border-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+}
+.swTortPage .swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swTortPage .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  width: 230px !important;
+  height: 151px !important;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  position: relative;
+}
+
+.swTortPage .swiper-pagination {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.swTortPage
+  .swiper-pagination.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin-bottom: 20px;
+  height: 5px;
+  width: 20px;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.swTortPage .swiper-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  height: 5px;
+  width: 50px !important;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Qo'lda yozilgan kod */
+
+.swTortPage .swTortTitleCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 7px 0;
+}
+
+.swTortPage .swTortTitleCard .swTortTitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 18.4px;
+  font-style: normal;
+  color: var(--text-color);
+  letter-spacing: 1px;
+}
+
+.swTortTitleCard .swTortBarchaUrl {
+  color: var(--text-color);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 13px;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  letter-spacing: 0.9px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* About code */
+
+.swTortItems {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.swTortItems .swUchItemBgImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+.swTortAboutCard {
+  position: absolute;
+  z-index: 2;
+  bottom: -390px;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  background: var(--backgroundblur);
+  backdrop-filter: blur(2.5px);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.swTortAboutCard .swTortTitle {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: left;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+/* Like code */
+
+.swTortAboutCard .swTortLikeCard {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.swTortAboutCard .swTortLikeCard .swTortLike {
+  display: flex;
+  gap: 5px;
+}
+
+.swTortAboutCard .swTortLikeCard .swTortLike span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swTortAboutCard .swTortLikeCard .swTortLike p {
+  color: var(--items-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 12px;
+  margin-top: 5px;
+}
+
+/* comment */
+
+.swTortAboutCard .swTortComment {
+  display: flex;
+  gap: 5px;
+}
+
+.swTortAboutCard .swTortComment span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swTortAboutCard .swTortComment p {
+  color: var(--items-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 12px;
+  margin-top: 5px;
+}
+
+/* time code */
+
+.swTortTimeCard {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.swTortAboutCard .swTortTimeCard .swTortTime {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.swTortAboutCard .swTortTimeCard .swTortTime span {
+  color: var(--items-color);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.swTortTimeCard .swTortTime span p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 0px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #c1c1c1;
+  margin-top: 3px;
+  margin-left: 6px;
+}
+
+/* Hover kod */
+
+.swTortItems:hover .swTortAboutCard {
+  bottom: 0;
+}
+
+.swTortTitleCard .swTortBarchaUrl:hover {
+  transform: scale(1.1);
+}

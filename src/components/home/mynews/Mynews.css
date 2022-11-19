@@ -1,0 +1,215 @@
+.myNewsPage {
+  margin-top: 20px;
+  padding: 15px 10px 10px 16px;
+  width: 1200px;
+  height: 100%;
+  background: var(--frame-color);
+  border: 1px solid var(--frame-border-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+}
+
+.myNewsTitleCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.myNewsTitle {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.myNewsFilCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.myNewsFilCard select {
+  border: 0.5px solid var(--frame-border-color);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+  border-radius: 15px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.myNewsFilCard select:nth-child(1) {
+  width: 195px;
+  height: 25px;
+}
+
+.myNewsFilCard select:nth-child(2) {
+  width: 278px;
+  height: 25px;
+}
+.myNewsFilCard select:nth-child(3) {
+  width: 278px;
+  height: 25px;
+}
+
+.myNewsPage .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.myNewsPage .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  width: 360px !important;
+  height: 270px !important;
+  cursor: pointer;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  flex-direction: column;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.myNewsPage .swiper-pagination {
+  width: 100% !important;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 87% !important;
+}
+
+.myNewsPage .swiper .swiper-pagination .swiper-pagination-progressbar-fill {
+  background-color: #ffffff;
+}
+
+.myNewsPage
+  .swiper-pagination.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin-bottom: 2px;
+  height: 5px;
+  width: 20px;
+  border-radius: 5px;
+  background: #a5a5a5;
+}
+
+.myNewsImgCard {
+  width: 100%;
+  height: 230px;
+  position: relative;
+  overflow: hidden !important;
+}
+
+.myNewsBgimg {
+  background-size: cover;
+  width: 360px;
+  height: 230px;
+  transition: 0.3s;
+}
+
+.myNewsImgCardText {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 50px;
+  padding: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: var(--text-color);
+}
+
+.myNewsAboutCard {
+  width: 100%;
+  height: 30px;
+  display: grid;
+  background-color: var(--background-blog-items);
+  grid-template-columns: auto auto auto;
+  gap: 5px;
+  font-size: 12px;
+  line-height: 11.04px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  padding: 5px 10px;
+}
+
+.myNewsAboutCard .myNewsAboutCardTime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  border-right: 1px solid var(--frame-border-color);
+}
+
+.myNewsAboutCard .myNewsAboutCardTime span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.myNewsAboutCard .myNewsAboutCardTime p {
+  margin-top: 5px;
+  margin-right: 5px;
+  color: white;
+}
+
+.myNewsAboutCardLike {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding-right: 10px;
+  border-right: 1px solid var(--frame-border-color);
+}
+
+.myNewsAboutCardLike span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myNewsAboutCardLike p {
+  margin-top: 5px;
+  color: var(--text-color);
+}
+
+.myNewsAboutCardComment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.myNewsAboutCardComment span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myNewsAboutCardComment p {
+  margin-top: 5px;
+  color: var(--noactive-text-color);
+}
+
+.myNewsItemUrl:hover .myNewsBgimg {
+  transform: scale(1.1);
+}

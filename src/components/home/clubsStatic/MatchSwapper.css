@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.clubInfoCard .swiper {
+  width: 100%;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clubInfoCard .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  width: 300px !important;
+  height: 150px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Qo'lda yozilgan kod */
+
+.clubInfo {
+  padding: 10px !important;
+  cursor: pointer;
+  overflow: hidden;
+  background: var(--match-date-background);
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.clubInfo .clubInfoTitle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.5px solid #636262a7;
+  padding-bottom: 5px;
+}
+.clubInfo .clubInfoTitle .time {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 14.72px;
+  font-family: "League Spartan", sans-serif;
+  margin-top: 7px;
+}
+.clubInfo .clubInfoTitle .time span {
+  background: -webkit-linear-gradient(0deg, #f04646 0%, #950000 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 700;
+  line-height: 18px;
+  font-family: "League Spartan", sans-serif;
+}
+
+.clubInfo .clubInfoTitle .time i {
+  font-size: 14px;
+  padding-bottom: 4px;
+  color: rgba(149, 159, 168, 1);
+}
+
+.clubInfo .clubInfoTitle .matchLive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  padding-bottom: 3px;
+}
+
+.clubInfo .clubLiga {
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  position: relative;
+}
+
+.clubInfoCard .clubInfo .clubLiga .defoulTClass {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  transition: 0.5s;
+  position: absolute;
+  width: 200px;
+  right: 0;
+}
+.clubInfo .clubLiga .hoverClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  width: 140px;
+  right: -145px;
+  font-size: 14px;
+  z-index: 2;
+  transition: 0.5s;
+  cursor: pointer;
+  color: #393838;
+}
+
+.clubInfo .clubLiga .hoverClass i {
+  color: #393838;
+  font-size: 20px;
+}
+
+/* Hover kod */
+
+.clubInfo:hover .clubLiga .defoulTClass {
+  opacity: 0;
+}
+
+.defoulTClass .clubLigaMatchLogo {
+  width: 25px !important;
+  height: 25px !important;
+}
+
+.clubInfo:hover .clubLiga .hoverClass {
+  right: 0;
+}
+
+/* Klub statistikasi haqida */
+
+.clubInfo .clubInfoMatch {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Kulub logo cod */
+.clubInfo .clubInfoMatch .clubInfoLogo {
+  width: 90px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.logoCard {
+  width: 40px;
+  height: 40px;
+  background-color: #ebf2f7;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoCard .logo {
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qisqaStatic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20px;
+}
+
+.clubName {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 11.04px;
+}
+
+.qisqaStatic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.qisqaStatic .card {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  gap: 3px;
+}
+
+.clubInfo .clubInfoMatch .clubMatchNatija {
+  width: 90px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+.anonsSvg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.natijaBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.matchHisob {
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.matchHisob span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 30px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #585858 0%, #000000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-top: 1px;
+}
+
+.matchHisob svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+}
+.timeInfo {
+  font-size: 10px;
+  font-weight: 400;
+  color: #959fa8;
+}
+
+.matchTran {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+
+.matchSharh {
+  width: 90px;
+  height: 20px;
+  background: linear-gradient(194.15deg, #bac7cc 12.82%, #60808d 86.94%);
+  border-radius: 12.5px;
+  border: none;
+  display: flex;
+  cursor: pointer;
+}
+
+.matchSharh .matchSharhBtn {
+  font-size: 10px;
+  height: 100%;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  line-height: 10px;
+}
+
+.tranLink {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  z-index: 3;
+  border-radius: 0 0 5px 5px;
+  background-color: white;
+  bottom: -41px;
+  transition: 0.3s;
+}
+
+.tranLinkActive {
+  bottom: 0;
+}
+
+.itemNone {
+  display: none !important;
+}
+
+
+/* animation code */
+.clubInfo .clubInfoTitle .matchLive path {
+	animation: wave 1s infinite var(--delay);
+}
+path:nth-child(1) { --delay: -0.4s; }
+path:nth-child(2) { --delay: -0.3s; }
+path:nth-child(3) { --delay: -0.2s; }
+path:nth-child(4) { --delay: -0.1s; }

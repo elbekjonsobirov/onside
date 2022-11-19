@@ -1,0 +1,213 @@
+.swUchPage {
+  width: 100%;
+  height: 880px;
+  background: var(--frame-color);
+  border: 1px solid var(--frame-border-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+  padding: 10px;
+}
+
+.swUchPage .swUchTitle {
+  width: 100%;
+}
+
+.swUchPage .swUchNews {
+  display: grid;
+  grid-template-columns: repeat(3, 240px);
+  row-gap: 10px;
+  height: 820px;
+  overflow-y: scroll;
+}
+
+.swUchPage .swUchNews .swUchItems {
+  width: 230px;
+  height: 173px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.swUchPage .swUchNews .swUchItems .swuchItemBgImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+
+/* Title kode */
+.swUchPage .swUchTitleCard{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px  2px;
+}
+.swUchPage .swUchTitleCard .swUchTitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 18px;
+  font-style: normal;
+  color: var(--text-color);
+  letter-spacing: 1px;
+}
+
+.swUchPage .swUchTitleCard .swUchBarchaUrl {
+  color: var(--text-color);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 13px;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  letter-spacing: 0.9px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* About code */
+
+.swUchPage .swUchNews .swUchItems .swUchAboutCard {
+  position: absolute;
+  z-index: 2;
+  bottom: -60px;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  background: var(--backgroundblur);
+  backdrop-filter: blur(2.5px);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.swUchPage .swUchNews .swUchItems .swUchAboutCard .swUchTitle {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 14px;
+  text-align: left;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  margin-bottom: 10px;
+}
+
+
+
+/* Like code */
+.swUchPage .swUchNews .swUchItems .swUchAboutCard .swUchLikeCard{ 
+    display: flex;
+    gap: 7px;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-style: normal;
+    color: var(--items-color);
+}
+
+.swUchAboutCard .swUchLikeCard .swUchLike {
+    display: flex;
+    gap: 5px;
+}
+
+.swUchAboutCard .swUchLikeCard .swUchLike span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swUchAboutCard .swUchLikeCard .swUchLike p {
+    margin-top: 5px;
+}
+
+/* comment */
+.swUchAboutCard .swUchLikeCard .swUchComment {
+    display: flex;
+    gap: 5px;
+}
+
+.swUchAboutCard .swUchLikeCard .swUchComment span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swUchAboutCard .swUchLikeCard .swUchComment p {
+    margin-top: 5px;
+}
+
+.swUchAboutCard .swUchLikeCard .swUchSport{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 2px;
+}
+
+.swUchAboutCard .swUchLikeCard .swUchSport span {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 10px;
+    text-transform: uppercase;
+    color: var(--sub-category-allnews);
+    margin-top: 2px;
+}
+
+/* time code */
+
+
+.swUchTimeCard {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.swUchTimeCard .swUchTime {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.swUchTimeCard .swUchTime span{
+    color: var(--items-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swUchTimeCard .swUchTime span p {
+  color: var(--items-color);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 0px;
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
+    margin-top: 5px;
+}
+
+
+/* Hover kod */
+
+.swUchPage .swUchNews .swUchItems:hover .swUchAboutCard {
+    bottom: 0;
+}
+
+
+.items-lines {
+  width: 220px;
+  height: 1px;
+  background-color: var(--items-color);
+}
+
+.swUchPage .swUchTitleCard .swUchBarchaUrl:hover {
+  transform: scale(1.1);
+}

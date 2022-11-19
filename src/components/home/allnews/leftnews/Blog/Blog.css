@@ -1,0 +1,211 @@
+.swapperIkki {
+  padding: 10px;
+  height: 620px;
+  background: var(--frame-color);
+  border: 1px solid var(--frame-border-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+}
+
+.swapperIkki .swiper {
+  width: 100%;
+  height: 600px !important;
+}
+
+.swapperIkki .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  width: 360px;
+  height: 260px;
+  cursor: pointer;
+  overflow: hidden;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  flex-direction: column;
+}
+
+.swapperIkki .swiper .swiper-scrollbar {
+  bottom: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Qo'lda yozilgan kod */
+
+/* Swapper title */
+.swapperIkki .swapperIkkiTitleCard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px  2px;
+}
+.swapperIkki .swapperIkkiTitleCard .swapperIkkiTitle {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 18.4px;
+    font-style: normal;
+    color: var(--text-color);
+    letter-spacing: 1px;
+}
+
+.swapperIkki .swapperIkkiTitleCard .swIkkiBarchaUrl {
+    color: var(--text-color);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 13px;
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    letter-spacing: 0.9px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+/* Swapper editor */
+
+.swapperIkki .swIKkiImgCard {
+  width: 360px;
+  height: 230px;
+  position: relative;
+  overflow: hidden;
+}
+
+.swapperIkki .swIKkiImgCard .swIkkItemBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  transition: 0.5s;
+}
+
+.swapperIkki .swIKkiImgCard .swIKkiImgCardText {
+  background: var(--backgroundblur);
+  backdrop-filter: blur(5px);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 50px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: var(--text-color);
+}
+
+.swapperIkki .swIKkiAboutCard {
+  width: 100%;
+  height: 30px;
+  display: grid;
+  background-color: var(--background-blog-items);
+  grid-template-columns: auto auto auto;
+  gap: 5px;
+  font-size: 12px;
+  line-height: 11.04px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  padding: 5px 10px;
+}
+
+
+
+/* Data card */
+
+.swapperIkki .swIKkiAboutCard .swIKkiAboutCardTime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-right: 1px solid var(--frame-border-color);
+}
+
+.swapperIkki .swIKkiAboutCard .swIKkiAboutCardTime span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swapperIkki .swIKkiAboutCard .swIKkiAboutCardTime p {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 5px;
+    color: var(--items-color);
+}
+
+
+/* About card */
+
+.swapperIkki .swIKkiAboutCard .swIKkiAboutCardLike {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-right: 10px;
+    border-right: 1px solid var(--frame-border-color);
+}
+
+.swapperIkki .swIKkiAboutCard .swIKkiAboutCardLike span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swapperIkki .swIKkiAboutCard .swIKkiAboutCardLike p {
+  font-size: 12px;
+    font-weight: 600;
+    margin-top: 5px;
+    color: var(--items-color);
+}
+
+
+
+/* Comment card */
+
+.swapperIkki .swIKkiAboutCard .swIKkiAboutCardComment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.swapperIkki .swIKkiAboutCard .swIKkiAboutCardComment span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swapperIkki .swIKkiAboutCard .swIKkiAboutCardComment p {
+    margin-top: 5px;
+    font-weight: 600;
+    color: var(--items-color);
+}
+
+/* Hover kod */
+
+.swapperIkki .swIKkiImgCard:hover .swIkkItemBg {
+  transform: scale(1.1);
+}
+
+.swapperIkkiTitleCard .swIkkiBarchaUrl:hover {
+  transform: scale(1.1);
+}

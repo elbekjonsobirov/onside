@@ -1,0 +1,50 @@
+.newsMaqMul {
+  width: 840px;
+  height: 80px;
+  background: var(--frame-color);
+  border: 1px solid var(--frame-border-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+  padding-left: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+.newsMaqMul .maqolaMuallifCard img{
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.maqolaMuallifCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 110%;
+  text-align: justify;
+  color: var(--text-color);
+}
+
+.maqolaManbaCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 110%;
+  text-align: justify;
+  color: #ffffff;
+}
+.maqolaManbaCard a{
+  color: var(--text-color);
+  text-decoration: none;
+}
+.avatar_img {
+  width: 30px;
+  height: 520px;
+  background-color: #8e8e8e;
+  border-radius: 15px;
+}

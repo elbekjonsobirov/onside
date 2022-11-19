@@ -1,0 +1,285 @@
+.markMatch {
+  width: 100%;
+  height: 285px;
+  padding: 10px;
+  background: var(--frame-color);
+  border: 1px solid var(--frame-border-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* swapper kod */
+.markMatch .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.markMatch .swiper-slide {
+  font-size: 18px;
+  background: var(--match-center-background);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 350px !important;
+  height: 180px !important;
+  overflow: hidden;
+}
+
+.markMatch .swiper-pagination {
+  width: 100% !important;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 99% !important;
+}
+
+.markMatch .swiper-pagination .swiper-pagination-progressbar-fill {
+  background-color: #ffffff;
+}
+
+.markMatch
+  .swiper-pagination.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin-bottom: 2px;
+  height: 5px;
+  width: 20px;
+  border-radius: 5px;
+  background: #a5a5a5;
+}
+
+.markMatch .swiper-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #fff;
+  height: 5px;
+  width: 50px !important;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px rgba(252, 56, 56, 0.3);
+}
+
+/* Qo'lda yozilgan kod */
+.markMatch .markMatchCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+}
+.markMatch .markMatchCard .markMatchTitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 18.4px;
+  font-style: normal;
+  color: var(--text-color);
+  letter-spacing: 1px;
+}
+
+.markMatch .markMatchCard a {
+  color: var(--text-color);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 13px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  letter-spacing: 0.9px;
+  margin-right: 10px;
+}
+
+.markMatchItem {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.markMatchItem .markMatchTitleCard {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.markMatchItem .markMatchTitleCard .markMatchTitle {
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 11px;
+  color: #000000;
+}
+
+.markMatchItem .markMatchTitleCard .markMatchStadium {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 11px;
+  color: #000000;
+  opacity: 0.5;
+}
+
+/* Match about kod */
+
+.markMatchItem .markMatchAboutCard {
+  width: 100%;
+  height: 140px;
+  display: flex;
+}
+.markMatchItem .markMatchAboutCard .markMatchAbout {
+  display: flex;
+  width: calc(100% / 3);
+  height: 95%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.markMatchAboutCard .markMatchAbout .markMatchName {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 11px;
+  color: #000000;
+}
+
+.markMatchAboutCard .markMatchInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: calc(100% / 3);
+  height: 100%;
+}
+
+.markMatchAboutCard .markMatchInfo img {
+  width: 25px;
+  margin-bottom: 5px;
+}
+
+.markMatchAboutCard .markMatchInfo .markMatchData {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 11px;
+  color: #d5356f;
+  text-transform: uppercase;
+}
+
+.markMatchAboutCard .markMatchInfo .markMatchVal {
+  font-style: normal;
+  font-family: 700;
+  font-size: 20px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.markMatchAboutCard .markMatchInfo .markMatchSharh {
+  background: linear-gradient(194.15deg, #bac7cc 12.82%, #60808d 86.94%);
+  border-radius: 12.5px;
+  padding: 7px 10px;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 9px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.markMatchBtnCard {
+  width: 100%;
+  bottom: 20px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 7px;
+}
+
+.markMatchBtnCard .markMatchAdd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 100px;
+  background: linear-gradient(135deg, #ffa24d 0%, #bd5b00 100%);
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.06);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  font-style: normal;
+  padding-top: 1px;
+  cursor: pointer;
+}
+
+.markMatchItem .markMatchTranCard {
+  width: 350px;
+  height: 40px;
+  background-color: white;
+  position: absolute;
+  z-index: 3;
+  bottom: -50px;
+  transition: 0.3s;
+}
+
+.markMatchItem .martranBtnActive {
+  bottom: 0px !important;
+}
+
+/* Button vode */
+
+.markMatchSharh {
+  font-size: 10px;
+  width: 92px;
+  height: 20px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  line-height: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.markMatchSharh .markMatchSharhBtn {
+  font-size: 10px;
+  height: 100%;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  line-height: 10px;
+  cursor: pointer;
+  position: absolute;
+  right: 3px;
+  top: 1px;
+}
+
+.markMatchSharh svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Hover */
+.markMatchAdd:hover {
+  background: #af5705;
+}

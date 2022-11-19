@@ -1,0 +1,142 @@
+.clubCard {
+  background-color: var(--frame-color);
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--frame-border-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  margin-top: 15px;
+}
+
+.clubDataCard {
+  width: 101px;
+  height: 98%;
+  border-right: 1px solid var(--frame-border-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clubDataIcon {
+  width: 100%;
+  height: 101px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clubDataIcon i {
+  font-size: 35px;
+  color: #ffffff;
+}
+.clubDataNum button {
+  padding: 10px;
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  gap: 5px;
+  color: rgba(180, 180, 180, 1);
+  font-family: "League Spartan", sans-serif;
+  cursor: pointer;
+}
+
+.clubDataNum .activeBtn {
+  color: #ffffff;
+}
+
+
+
+.clubInfoCard {
+  width: 1100px;
+  height: 100%;
+  padding: 10px;
+}
+
+.clubDataNum {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.clubCard .clubDataCard .clubDataNum svg {
+	fill: rgb(182, 83, 83);
+}
+
+@keyframes wave {
+	50% { fill: red; }
+}
+
+.calendarBtn svg{
+  fill: none !important;
+}
+
+.clubCard .clubDataCard .clubStatikFill span {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+.clubDataNum .clubStatikFillLive span {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--text-color);
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+
+.clubStatikFillLive path {
+	animation: wave 1s infinite var(--delay);
+}
+path:nth-child(1) { --delay: -0.4s; }
+path:nth-child(2) { --delay: -0.3s; }
+path:nth-child(3) { --delay: -0.2s; }
+path:nth-child(4) { --delay: -0.1s; }
+
+
+.clubAllData {
+  position: relative;
+  margin-top: auto;
+  margin-bottom: 15px;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 13px;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  letter-spacing: 0.9px;
+  transition: 0.3s;
+}
+
+.clubDataCard .clubAllData:hover {
+  transform: scale(1.1);
+}
+
+/* Vaqtincha */
+
+.clubInfoCard h1 {
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--noactive-text-color);
+  text-transform: uppercase;
+}

@@ -1,0 +1,231 @@
+.intPage {
+  width: 1200px;
+  height: auto;
+  margin-top: 20px;
+}
+
+.intPageUrl {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.intPageUrl .intHomeUrl {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 17px;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.intAllItemCard {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.intAllItemCard .intItemCard {
+    width: 880px;
+    height: 1206px;
+    background: var(--frame-color);
+    border: 1px solid var(--frame-border-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    padding: 17px 10px;
+}
+
+.intItemCard .intFilCard {
+  display: none;
+  align-items: center;
+  gap: 35px;
+}
+
+.intItemCard .intFilCard .intFilTur {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.intItemCard .intFilCard .intFilTur .MuiSvgIcon-root {
+  display: none;
+}
+
+.intFilCard .intFilTur .intTurSelectOne .MuiSelect-select {
+  width: 180px;
+  height: 24px;
+  font-family: "League Spartan";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  color: var(--text-color);
+  outline: none;
+}
+.intFilCard .intFilTur .intTurSelectTwo .MuiSelect-select {
+  width: 134px;
+  height: 22px;
+  font-family: "League Spartan";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  color: var(--text-color);
+  outline: none;
+}
+
+.intItemCard .intItems {
+    height: 1130px;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  overflow-y: scroll;
+}
+
+.intItemCard .intItems .intItem {
+  width: 415px;
+  height: 261px;
+  background-size: cover;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.intItems .intItem .intItemAbout {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 87px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  padding: 11px;
+}
+
+.intItems .intItem .intItemAbout .intAboutTitle {
+  width: 100%;
+  height: 35px !important;
+  height: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--text-color);
+}
+
+.intItem .intItemAbout .intAboutCatCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intItemAbout .intAboutCatCard .intAboutCat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.intAboutCatCard .intAboutCat .intAboutSubCat {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #21d5ee;
+  margin-top: 2px;
+}
+
+.intAboutCatCard .intAboutRating {
+  font-size: 16px;
+  color: var(--rating-star);
+}
+
+.intAboutDataCard {
+  display: flex;
+  margin-top: 2px;
+}
+
+.intAboutDataCard .intAboutData {
+  width: 136px;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  border-right: 1px solid var(--frame-border-color);
+  gap: 10px;
+}
+
+.intAboutDataCard .intAboutData .intAboutDay {
+  display: flex;
+  align-items: center;
+  
+}
+
+.intAboutDay span {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--noactive-text-color);
+  margin-left: 4px;
+  padding-top: 4px;
+}
+
+.intAboutDataCard .intAboutLikeCard {
+  display: flex;
+  align-items: center;
+}
+
+.intAboutLikeCard .intAboutLike {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--frame-border-color);
+  gap: 5px;
+  padding: 0 10px;
+}
+
+.intAboutLikeCard .intAboutLike span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 11px;
+  display: flex;
+  align-items: flex-end;
+  color: var(--noactive-text-color);
+  margin-top: 3px;
+}
+.intAboutLikeCard .intAboutCom {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+
+.intAboutLikeCard .intAboutCom span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 11px;
+  display: flex;
+  align-items: flex-end;
+  color: var(--noactive-text-color);
+  margin-top: 3px;
+}
