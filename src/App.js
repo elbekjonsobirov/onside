@@ -22,95 +22,106 @@ import { useNavigate } from "react-router-dom";
 
 function App() {
   const navigate = useNavigate();
-  window.scrollTo(0, 0)
+  window.scrollTo(0, 0);
   function NavActive(id) {
     const UlActiveArr = document.querySelector(".UlActive"),
       UlActive = UlActiveArr.querySelectorAll("li");
     UlActive.forEach((item) => item.classList.remove("navActive"));
-    if (id === '/category/4') {
+    if (id === "/category/4") {
       UlActive[4].classList.add("navActive");
-    } else if (id  === '/category/2') {
+    } else if (id === "/category/2") {
       UlActive[2].classList.add("navActive");
-    } else if (id  === '/gallery') {
+    } else if (id === "/gallery") {
       UlActive[6].classList.add("navActive");
-    }
-     else {
+    } else {
       UlActive.forEach((item) => item.classList.remove("navActive"));
     }
   }
 
-
   // Loader function
 
-  const [load, setLoad] = useState(false)
+  const [load, setLoad] = useState(false);
 
   window.addEventListener("click", function (event) {
     // let itemId = event.target.id;
     // let itemClass = event.target;
-    
     // Top Match
-  // let btnArr = document.querySelectorAll(".tranLink");
-
-  // if (
-  //   itemClass.classList == "matchTransSVG" ||
-  //   itemClass.classList == "matchSharhBtn"
-  // ) {
-  //   btnArr.forEach((item) => {
-  //     item.classList.remove("tranLinkActive");
-  //   });
-  //   btnArr[itemId].classList.add("tranLinkActive");
-  // } else {
-  //   btnArr.forEach((item) => {
-  //     item.classList.remove("tranLinkActive");
-  //   });
-  // }
-
-  // Mark match
-  // let marBtnsArr = document.querySelectorAll(".markMatchTranCard");
-
-  // if (
-  //   itemClass.classList == "markMatchSharhBtn" ||
-  //   itemClass.classList == "MarMatchSvgId"
-  // ) {
-  //   marBtnsArr.forEach((item) => {
-  //     item.classList.remove("martranBtnActive");
-  //   });
-  //   marBtnsArr[itemId].classList.add("martranBtnActive");
-  // } else {
-  //   marBtnsArr.forEach((item) => {
-  //     item.classList.remove("martranBtnActive");
-  //   });
-  // }
-
-  // User profilessettings
-  // let profileMenu = document.querySelector(".userProfeditor");
-
-  // if (itemClass.classList == "bdtonclickDiv") {
-  //   profileMenu.classList.toggle("userProfRemove");
-  // } else {
-  //   profileMenu.classList.add("userProfRemove");
-  // }
-
-  // Navbar Active
+    // let btnArr = document.querySelectorAll(".tranLink");
+    // if (
+    //   itemClass.classList == "matchTransSVG" ||
+    //   itemClass.classList == "matchSharhBtn"
+    // ) {
+    //   btnArr.forEach((item) => {
+    //     item.classList.remove("tranLinkActive");
+    //   });
+    //   btnArr[itemId].classList.add("tranLinkActive");
+    // } else {
+    //   btnArr.forEach((item) => {
+    //     item.classList.remove("tranLinkActive");
+    //   });
+    // }
+    // Mark match
+    // let marBtnsArr = document.querySelectorAll(".markMatchTranCard");
+    // if (
+    //   itemClass.classList == "markMatchSharhBtn" ||
+    //   itemClass.classList == "MarMatchSvgId"
+    // ) {
+    //   marBtnsArr.forEach((item) => {
+    //     item.classList.remove("martranBtnActive");
+    //   });
+    //   marBtnsArr[itemId].classList.add("martranBtnActive");
+    // } else {
+    //   marBtnsArr.forEach((item) => {
+    //     item.classList.remove("martranBtnActive");
+    //   });
+    // }
+    // User profilessettings
+    // let profileMenu = document.querySelector(".userProfeditor");
+    // if (itemClass.classList == "bdtonclickDiv") {
+    //   profileMenu.classList.toggle("userProfRemove");
+    // } else {
+    //   profileMenu.classList.add("userProfRemove");
+    // }
+    // Navbar Active
   });
 
-  const [clubLogo, setClubLogo] = useState([])
+  const [clubLogo, setClubLogo] = useState([]);
+
+  // useEffect(() => {
+  //   const loadUsers = async () => {
+  //     setLoad(true);
+  //     const response = await axios.get(
+  //       "http://185.196.213.14:3001/news/byType?type=COMMON&page=1&limit=25"
+  //     );
+  //     const clubApi = await axios.get('http://185.196.213.14:3001/clubs')
+  //     setClubLogo(clubApi.data);
+  //     setLoad(false);
+  //   };
+
+  //   loadUsers();
+  //   NavActive(window.location.pathname)
+  // }, [window.location.pathname]);
 
   useEffect(() => {
     const loadUsers = async () => {
       setLoad(true);
-      const response = await axios.get(
-        "http://185.196.213.14:3001/news/byType?type=COMMON&page=1&limit=25"
-      );
-      const clubApi = await axios.get('http://185.196.213.14:3001/clubs')
+      const response = await axios({
+        method: "get",
+        url: "http://185.196.213.14:3001/news/byType?type=COMMON&page=1&limit=25",
+        withCredentials: false,
+      });
+      const clubApi = await axios({
+        url: "http://185.196.213.14:3001/clubs",
+        method: "get",
+        withCredentials: false,
+      });
       setClubLogo(clubApi.data);
       setLoad(false);
     };
 
     loadUsers();
-    NavActive(window.location.pathname)
+    NavActive(window.location.pathname);
   }, [window.location.pathname]);
-
 
   return (
     <div className="homeContainer">
@@ -138,7 +149,7 @@ function App() {
         <div className="club_logos">
           {clubLogo.map((item, index) => (
             <a href={item.link} key={index}>
-              <img src={item.image.url} alt="logo"/>
+              <img src={item.image.url} alt="logo" />
             </a>
           ))}
         </div>
@@ -151,24 +162,60 @@ function App() {
         <nav>
           <ul className="UlActive">
             <li class="main left">
-              <span onClick={() => {navigate(`/category/0`)}}>o‘yin markazi</span>
+              <span
+                onClick={() => {
+                  navigate(`/category/0`);
+                }}
+              >
+                o‘yin markazi
+              </span>
             </li>
-            <li class="main" onClick={() => {navigate(`/category/1`)}}>
+            <li
+              class="main"
+              onClick={() => {
+                navigate(`/category/1`);
+              }}
+            >
               <span>Futbol Yangiliklari</span>
             </li>
-            <li class="main" onClick={() => {navigate(`/category/2`)}}>
+            <li
+              class="main"
+              onClick={() => {
+                navigate(`/category/2`);
+              }}
+            >
               <span>bloglar</span>
             </li>
-            <li class="main" onClick={() => {navigate(`/category/3`)}}>
+            <li
+              class="main"
+              onClick={() => {
+                navigate(`/category/3`);
+              }}
+            >
               <span>Qatar 2022</span>
             </li>
-            <li class="main" onClick={() => {navigate(`/category/4`)}}>
+            <li
+              class="main"
+              onClick={() => {
+                navigate(`/category/4`);
+              }}
+            >
               <span>Sport Yangiliklari</span>
             </li>
-            <li class="main" onClick={() => {navigate(`/category/5`)}}>
+            <li
+              class="main"
+              onClick={() => {
+                navigate(`/category/5`);
+              }}
+            >
               <span> statistika</span>
             </li>
-            <li class="right" onClick={() => {navigate(`/gallery`)}}>
+            <li
+              class="right"
+              onClick={() => {
+                navigate(`/gallery`);
+              }}
+            >
               <span>
                 <svg
                   width="8"
@@ -196,7 +243,7 @@ function App() {
               <>
                 <ClubsStatik />
                 <Allnews />
-                <Championatlogo/>
+                <Championatlogo />
                 {/* <Youtubelist /> */}
                 <GalleryCard />
                 {/* <Mynews /> */}
@@ -205,17 +252,14 @@ function App() {
           />
           <Route path="/category/:id/" element={<Yangiliklar />} />
           <Route path="/:categoryId/:id" element={<Newspage />} />
-          <Route
-            path="/category/interview"
-            element={<Interviewall />}
-          />
+          <Route path="/category/interview" element={<Interviewall />} />
           <Route path="/search/:id" element={<Search />} />
-        <Route path="/gallery" element={<Gallerypage/>}/>
+          <Route path="/gallery" element={<Gallerypage />} />
         </Routes>
       </div>
 
       <Footer />
-      <Loading load={load}/>
+      <Loading load={load} />
     </div>
   );
 }
