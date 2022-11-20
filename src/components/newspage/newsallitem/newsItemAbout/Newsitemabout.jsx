@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import newsItemShare from "../../../home/svg/Vector (7).svg";
-import "./Newsitemabout.css";
 import Rating from "@mui/material/Rating";
-import {RichTextEditor} from '@mantine/rte'
+import { RichTextEditor } from "@mantine/rte";
+import "./Newsitemabout.css";
 import {
   TelegramShareButton,
   TwitterShareButton,
@@ -11,13 +11,20 @@ import {
   VKShareButton,
 } from "react-share";
 
-export default function Newsitemabout(props) {
-  const [value, setValue] = React.useState(0);
-  let newsItem = props.newsItem;
-  // localStorage.setItem("category", newsItem.subCategory)
+export default function Newsitemabout({ newsItem }) {
+  const [value, setValue] = useState(0);
+  // let nnn = localStorage.getItem('activeNews')
+  // let nat = JSON.parse(nnn)
+  // let newsItem = props.newsItem;
+  // let newsItemData = nat.publishedAt
+  // let newsItemCat = nat.category.name
+  // let newsItemSubCat = nat.subCategory.name
+
   return (
     <div className="newsItemCard">
-      <h1 className="newsItemTitle">{newsItem.text}</h1>
+      <h1 className="newsItemTitle">
+        {newsItem.length === 0 ? "" : newsItem.text}
+      </h1>
       <div className="newsItemDataCard">
         <div className="newsItemData">
           <div className="newsItemDataItem">
@@ -35,7 +42,9 @@ export default function Newsitemabout(props) {
                 fill="#C1C1C1"
               />
             </svg>
-            {/* <span>{1}</span> */}
+            <span>
+              {newsItem.length === 0 ? "" : newsItem.publishedAt.slice(11, 16)}
+            </span>
           </div>
           <div className="newsItemDataItem">
             <svg
@@ -50,13 +59,29 @@ export default function Newsitemabout(props) {
                 fill="#A8B4B8"
               />
             </svg>
-            {/* <span>{newsItem.publishedAt.slice(0, 10)}</span> */}
+            <span>
+              {newsItem.length === 0 ? "" : newsItem.publishedAt.slice(0, 10)}
+            </span>
           </div>
         </div>
-        {/* <a href="">{newsItem.subCategory.name}</a> */}
+        <span>
+          <a href={window.location.href}>
+            {newsItem.length === 0 ? "" : newsItem.category.name}
+          </a>
+          <div className="catLine"></div>
+          <a href={window.location.href}>
+            {newsItem.length === 0 ? "" : newsItem.subCategory.name}
+          </a>
+        </span>
       </div>
       <div className="mewsItem">
-      <RichTextEditor className="newsItemRich" readOnly value={newsItem.editorText} id="rte" />
+        <img src={newsItem.length === 0 ? "" : newsItem.image.url} alt="Foto" />
+        <RichTextEditor
+          className="newsItemRich"
+          readOnly
+          value={newsItem.editorText}
+          id="rte"
+        />
       </div>
       <div className="newsItemLine"></div>
       <div className="newsItemfooter">
@@ -247,9 +272,14 @@ export default function Newsitemabout(props) {
               </svg>
               <span>Izohlar</span>
             </div>
-            <Rating className="newsAllRat" name="simple-controlled" value={value} onChange={(event, newValue) => {
-          setValue(newValue);
-        }}/>
+            <Rating
+              className="newsAllRat"
+              name="simple-controlled"
+              value={value}
+              onChange={(event, newValue) => {
+                setValue(newValue);
+              }}
+            />
           </div>
         </div>
       </div>

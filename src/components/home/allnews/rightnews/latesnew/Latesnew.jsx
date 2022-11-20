@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./Latesnew.css";
-import newsImg from "../../../../Imgs/Rectangle 286.png";
 // svg
 import latSvg from "../../../svg/Vector (Stroke) (3).svg";
 // Material UI
@@ -10,19 +9,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default function Latesnew() {
-  const [value] = useState(2);
   const navigate = useNavigate();
-
-  const [test] = useState(
-    "Feliks dubl bilan Atletiko Real Betis ustidan g'alaba qo svdnkjdvndf skljvndskvjns dvjksdv bbfbcxbxcbxcbnkjvdnsd vkjnsdvsdjk dsnzondi..."
-  );
-
-  const [latTestArr] = useState([
-    {
-      title: "",
-    }
-  ]);
-
+  let DateDay = new Date()
   const [latNewsAll, setLatNewsAll] = useState([])
 
   useEffect(() => {
@@ -33,13 +21,15 @@ export default function Latesnew() {
 
     latFunc()
   },[])
-
+  let hiyTech = (index, item)=>{
+    navigate(`/7/${index}`);
+  }
   return (
     <div className="latNewsPage">
       <div className="latTitleCard">
         <h1 className="latTitle">So‘ngI yangiliklar</h1>
         <div
-          onClick={(item) => {
+          onClick={() => {
             navigate(`/category/7`);
           }}
           className="latBarchaUrl"
@@ -172,7 +162,6 @@ export default function Latesnew() {
               </filter>
             </defs>
           </svg>
-
           <select name="" id="">
             <option value="" className="option">
               Barcha
@@ -191,18 +180,23 @@ export default function Latesnew() {
       </div>
       <div className="latNewsCard">
         {latNewsAll.map((item, index) => (
-          <div>
+          <div key={index}>
             <div
-              onClick={() => {
-                navigate(`/7/${index}`);
-              }}
+              onClick={()=>hiyTech(index, item)}
               className="latNewsItem"
             >
               <div className="latNewsImgCard" style={{backgroundImage: `url(${item.image.url})`}}>
-                <h6 className="latNewsData">{item.publishedAt.slice(11, 16)}</h6>
+                <h6 className="latNewsData">
+                  <span>
+                  {DateDay.getDate() === +item.publishedAt.slice(0, 2) ? "" : item.publishedAt.slice(5, 10)}
+                  </span>
+                  <span>
+                  {item.publishedAt.slice(11, 16)}
+                  </span>
+                  </h6>
               </div>
               <div className="latNewsItemAbout">
-                <h2 className="latNewsTag">{item.subCategoryId}</h2>
+                <h2 className="latNewsTag">{item.subCategory.name}</h2>
                 <h3 className="latNewsTitle">
                   {item.text.length > 60 ? `${item.text.slice(0, 60)}...` : item.text}
                 </h3>

@@ -125,11 +125,7 @@
 }
 
 .homeContainer {
-  /* background: var(--background-color); */
-  background-image: url('./components/Imgs/Frame\ 1941.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  background: var(--background-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,7 +216,7 @@ nav ul li span {
 
 nav ul li:hover span {
   text-decoration: none;
-  color: #222;
+  color: black !important;
 }
 
 
@@ -231,7 +227,6 @@ nav ul li:hover span {
   height: 50px;
   width: 100%;
   padding: 1px auto;
-  background-color: aqua;
   gap: 30px;
   background: linear-gradient(135deg, #585858 0%, #000000 100%);
 }
@@ -283,5 +278,5 @@ nav ul li:hover span {
 }
 
 .navActive span {
-  color: black;
+  color: black !important;
 }

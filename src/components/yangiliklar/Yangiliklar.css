@@ -127,7 +127,7 @@
   height: 80px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
 }
 
 .yangItemTitle {
@@ -152,6 +152,13 @@
   letter-spacing: 0.5px;
   line-height: 18px;
   color: var(--noactive-text-color);
+  background: none;
+  border: none;
+}
+
+.yangItemBat * {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 .yangItemAboutCard a {
   display: flex;

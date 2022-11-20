@@ -19,7 +19,7 @@ export default function Championatlogo() {
         <div className="championatLogoCard">
             {
                 chamLogo.map((item, index) => (
-                    <a href={item.link} target="_blank">
+                    <a href={item.link} target="_blank" key={index}>
                         <img src={item.image.url} alt="" />
                     </a>
                 ))

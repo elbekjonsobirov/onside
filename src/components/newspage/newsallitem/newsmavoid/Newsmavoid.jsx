@@ -11,29 +11,26 @@ import axios from "axios";
 
 export default function Newsmavoid() {
   const navigate = useNavigate();
-  const { categoryId, id } = useParams();
-  const {newsPageUrl} = window.location.href
-  const [newsCat, setNewsCat] = useState("COMMON")
+  const { categoryId } = useParams();
   const [newsItem, setNewsItem] = useState([])
-
-  function newIditUrl(categoryId) {
-    if (categoryId == 2) {
-      setNewsCat("BLOG")
-    } else if (categoryId == 7) {
-      setNewsCat("COMMON")
-    } else if (categoryId == 4) {
-      setNewsCat("SPORT")
-    }
-  }
-
+  const [dataVal, setDataVal] = useState('')
+  
   useEffect(() => {
-    const newsItemFunc = async () => {
-      const newsItemApi = await axios.get(`http://185.196.213.14:3001/news/byType?type=${newsCat}&page=1&limit=25`)
-      setNewsItem(newsItemApi.data.data);
+    if (+categoryId === 2) {
+      setDataVal('BLOG')
+    } else if (+categoryId === 7) {
+      setDataVal('COMMON')
+    } else if (+categoryId === 4) {
+      setDataVal('SPORT')
+    } else if (+categoryId === 8) {
+      setDataVal('PHOTO')
+    } else if (+categoryId === 9) {
+      setDataVal('INTERVIEW')
     }
-    newsItemFunc()
-    newIditUrl(categoryId);
-  },[newsPageUrl])
+
+   axios.get(`http://185.196.213.14:3001/news/byType?type=${dataVal}&page=1&limit=25`)
+        .then(res=>setNewsItem(res.data.data))
+  },[dataVal])
 
   return (
     <div className="newsMavOid">
@@ -48,7 +45,7 @@ export default function Newsmavoid() {
           modules={[Pagination]}
           className="mySwiper"
         >
-          {newsItem.map((item, index) => (
+          {newsItem.length !== 0 ? newsItem.map((item, index) => (
             <SwiperSlide
               onClick={() => {
                 navigate(`/${categoryId}/${index}`);
@@ -68,7 +65,7 @@ export default function Newsmavoid() {
                     Chempionlar ligasi
                   </a>
                   <h1 className="newsMavOidTitle">
-                    {item.text.length > 80 ? `${item.text.slice(0, 70)}...` : item.text}
+                    {item.text.length > 60 ? `${item.text.slice(0, 60)}...` : item.text}
                   </h1>
                   <div className="newsMavOidComm">
                     <div className="newsMavOidLike">
@@ -96,7 +93,7 @@ export default function Newsmavoid() {
                 </div>
               </div>
             </SwiperSlide>
-          ))}
+          )):''}
         </Swiper>
       </div>
     </div>

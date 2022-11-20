@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./Yangiliklar.css";
-import yangItemImg from "../Imgs/news-image.jpg";
-import yangAplLogo from "../home/svg/aplLogo.svg";
 import Avatar from "@mui/material/Avatar";
 import Rating from "@mui/material/Rating";
 import { Link } from "react-router-dom";
@@ -16,47 +14,40 @@ import {
   WhatsappShareButton,
   VKShareButton,
 } from "react-share";
+import RichTextEditor from "@mantine/rte";
 
 export default function Yangiliklar() {
-  window.scrollTo(0, 0)
+  window.scrollTo(0, 0);
   const navigate = useNavigate();
-  const [value] = useState(2);
   const { id } = useParams();
 
-  const {pageURL} = window.location.href
-  const [urlName, setUrlName] = useState("")
-  const [categoryName, setCategoryName] = useState("")
+  const { pageURL } = window.location.href;
+  const [urlName, setUrlName] = useState("");
+  const [categoryName, setCategoryName] = useState("");
+  const [yangNewsAll, setYangNewsAll] = useState([]);
+  // const [dataNews, setDataNews] = useState([])
 
-  function editUrl(id) {
-    if (id == 2){
-      setUrlName('bloglar')
-      setCategoryName("BLOG")
-    } else if(id == 4) {
-      setCategoryName("SPORT")
-      setUrlName('Sport yangiliklari')
-    } else if(id == 7) {
-      setCategoryName("COMMON")
-      setUrlName('So‘ngi yangiliklar')
-    } else {
-      setCategoryName("COMMON")
+  useEffect(() => {
+    function editUrl(id) {
+      if (+id === 2) {
+        setUrlName("bloglar");
+        setCategoryName("BLOG");
+      } else if (+id === 4) {
+        setCategoryName("SPORT");
+        setUrlName("Sport yangiliklari");
+      } else if (+id === 7) {
+        setCategoryName("COMMON");
+        setUrlName("So‘ngi yangiliklar");
+      }
     }
-}
 
-
-const [yangNewsAll, setYangNewsAll] = useState([])
-
-useEffect(() => {
-  const yangFunc = async () => {
-    const yangItem = await axios.get(`http://185.196.213.14:3001/news/byType?type=${categoryName}&page=1&limit=25`)
-    setYangNewsAll(yangItem.data.data);
-  }
-
-  editUrl(id)
-  yangFunc()
-},[categoryName])
-  const [testP] =
-    useState(`Niderlandiya terma jamoasi bosh murabbiyi Lui van Gal Qatarda bo‘lib o‘tadigan Jahon
-chempionati uchun yakuniy tarkibni ma’lum qildi.`);
+    axios
+      .get(
+        `http://185.196.213.14:3001/news/byType?type=${categoryName}&page=1&limit=25`
+      )
+      .then(res => setYangNewsAll(res.data.data));
+    editUrl(id);
+  }, [categoryName]);
 
   return (
     <div className="yangPage">
@@ -83,7 +74,9 @@ chempionati uchun yakuniy tarkibni ma’lum qildi.`);
             stroke-linejoin="round"
           />
         </svg>
-        <Link to={pageURL} className="PageAllUrl">{urlName}</Link>
+        <Link to={pageURL} className="PageAllUrl">
+          {urlName}
+        </Link>
       </div>
       <div className="yangAllcard">
         <div className="yangCard">
@@ -249,39 +242,51 @@ chempionati uchun yakuniy tarkibni ma’lum qildi.`);
             </div>
           </div>
           <div className="yangAllItemCard">
-            {yangNewsAll.map((item, index) => (
+            {yangNewsAll.length !== 0 ? yangNewsAll.map((item, index) => (
               <div>
                 <div className="yangAllItem">
                   <div
-                  onClick={() => {
-                    navigate(`/${id}/${index}`);
-                  }}
+                    onClick={() => {
+                      navigate(`/${id}/${index}`);
+                    }}
                     className="yangItemImg"
                     style={{ backgroundImage: `url(${item.image.url})` }}
                   ></div>
                   <div className="yangItemAboutCard">
-                    <div onClick={() => {
-                    navigate(`/xabarlar/post/${index + 1}`);
-                  }} className="yangItemTextCard">
+                    <div
+                      onClick={() => {
+                        navigate(`/${id}/${index}`);
+                      }}
+                      className="yangItemTextCard"
+                    >
                       <h1 className="yangItemTitle">
-                        {item.text.length > 100 ? `${item.text.slice(0, 100)}...` : item.text}
+                        {item.text.length > 100
+                          ? `${item.text.slice(0, 100)}...`
+                          : item.text}
                       </h1>
-                      <p className="yangItemBat">
-                        {testP.length > 120
-                          ? `${testP.slice(0, 120)}...`
-                          : testP}
-                      </p>
+                      <RichTextEditor
+                        readOnly
+                        value={
+                          item.editorText.length > 120
+                            ? `${item.editorText.slice(0, 120)}...`
+                            : item.editorText
+                        }
+                        className="yangItemBat"
+                      />
                     </div>
                     <a href="/">
-                      <img src={yangAplLogo} alt="" />
-                      Angliya Primyer Ligasi
+                      {/* <img src={yangAplLogo} alt="" /> */}
+                      {item.subCategory.name}
                     </a>
                     <div className="yangItemFoot">
-                      <div onClick={() => {
-                    navigate(`/xabarlar/post/${index + 1}`);
-                  }} className="yangItemMuallifCrad">
+                      <div
+                        onClick={() => {
+                          navigate(`/xabarlar/post/${index + 1}`);
+                        }}
+                        className="yangItemMuallifCrad"
+                      >
                         <div className="yangItemMuallif">
-                          <Avatar alt="Remy Sharp" src={yangItemImg} />
+                          <Avatar alt="Remy Sharp" src="" />
                           <div className="yangItemMualNameCard">
                             <h4 className="yangItemMualName">{`${item.author.name} ${item.author.surname}`}</h4>
                             <span>
@@ -299,7 +304,7 @@ chempionati uchun yakuniy tarkibni ma’lum qildi.`);
                                   fill="#C1C1C1"
                                 />
                               </svg>
-                              <h6>1</h6>
+                              <h6>{item.publishedAt.slice(11, 16)}</h6>
                             </span>
                           </div>
                         </div>
@@ -388,7 +393,10 @@ chempionati uchun yakuniy tarkibni ma’lum qildi.`);
                             <h6>Ulashing</h6>
                           </span>
                           <div className="yangItemMessen">
-                            <TelegramShareButton url={window.location.href} className="linkBtn">
+                            <TelegramShareButton
+                              url={window.location.href}
+                              className="linkBtn"
+                            >
                               <svg
                                 width="20"
                                 height="20"
@@ -415,7 +423,10 @@ chempionati uchun yakuniy tarkibni ma’lum qildi.`);
                                 </defs>
                               </svg>
                             </TelegramShareButton>
-                            <TwitterShareButton url={window.location.href} className="linkBtn">
+                            <TwitterShareButton
+                              url={window.location.href}
+                              className="linkBtn"
+                            >
                               <svg
                                 width="21"
                                 height="20"
@@ -442,7 +453,10 @@ chempionati uchun yakuniy tarkibni ma’lum qildi.`);
                                 </defs>
                               </svg>
                             </TwitterShareButton>
-                            <FacebookShareButton url={window.location.href} className="linkBtn">
+                            <FacebookShareButton
+                              url={window.location.href}
+                              className="linkBtn"
+                            >
                               <svg
                                 width="21"
                                 height="20"
@@ -469,7 +483,10 @@ chempionati uchun yakuniy tarkibni ma’lum qildi.`);
                                 </defs>
                               </svg>
                             </FacebookShareButton>
-                            <WhatsappShareButton url={window.location.href} className="linkBtn">
+                            <WhatsappShareButton
+                              url={window.location.href}
+                              className="linkBtn"
+                            >
                               <svg
                                 width="20"
                                 height="20"
@@ -511,7 +528,10 @@ chempionati uchun yakuniy tarkibni ma’lum qildi.`);
                                 </defs>
                               </svg>
                             </WhatsappShareButton>
-                            <VKShareButton url={window.location.href} className="linkBtn">
+                            <VKShareButton
+                              url={window.location.href}
+                              className="linkBtn"
+                            >
                               <svg
                                 width="21"
                                 height="20"
@@ -548,7 +568,7 @@ chempionati uchun yakuniy tarkibni ma’lum qildi.`);
                 </div>
                 <div className="yangItemLine"></div>
               </div>
-            ))}
+            )): ''}
             <div className="yangAddBtnCard">
               <button className="yangAdditem">
                 <svg

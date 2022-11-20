@@ -1,19 +1,7 @@
-import axios from "axios";
-import React, { useEffect } from "react";
+import React from "react";
 import "./Footer.css";
 
 export default function Footer() {
-  let data = {
-    menu: {
-      name: "Chempionlar Ligasi",
-      subMenu: [{ name: "Barselona" }, { name: "Real Madrid" }],
-    },
-    name: "Futbol",
-  };
-  // useEffect(()=>{
-  //   console.log("-----------------------------");
-  //   fetch("http://185.196.213.14:3001/categories",{method:"get"}).then(res=>res.json()).then(body=>console.log(body))
-  // },[])
   return (
     <div className="footPage">
       <div className="footItemcard">
@@ -225,7 +213,7 @@ export default function Footer() {
               </defs>
             </svg>
           </a>
-          <a href="">
+          <a href="/">
             <svg
               width="146"
               height="44"
@@ -254,7 +242,7 @@ export default function Footer() {
               </defs>
             </svg>
           </a>
-          <a href="">
+          <a href="/">
             <svg
               width="145"
               height="44"

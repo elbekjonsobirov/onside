@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
-import swTortImg from "../../../../Imgs/image48.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -72,7 +71,7 @@ export default function Interview() {
         {interNewsAll.map((item, index) => (
           <SwiperSlide
             onClick={() => {
-              navigate(`/${item.categoryId}/${index}`);
+              navigate(`/9/${index}`);
             }}
             className="swTortItems"
             key={index}

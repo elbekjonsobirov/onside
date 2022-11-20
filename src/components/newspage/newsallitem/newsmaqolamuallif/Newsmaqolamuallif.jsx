@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Newsmaqolamuallif.css";
 import image from "../../../Imgs/Muharir.jpg";
 
-export default function Newsmaqolamuallif(props) {
-  let newsItem = props.newsItem;
-  let newsMul = newsItem.author
+export default function Newsmaqolamuallif({ newsItem }) {
+  // console.log(newsItem);
+
   return (
     <div className="newsMaqMul">
       <a href="" className="maqolaMuallifCard">
         <img src={image} alt="" />
-        Muharir: <span>{`${newsMul.name}`}</span>
+        Muharir:{" "}
+        <span className="authorName">{`${newsItem.length === 0 ? "": newsItem.author.name } ${newsItem.length === 0 ? "": newsItem.author.surname}`}</span>
       </a>
       <div className="maqolaManbaCard">
         <svg
@@ -32,7 +33,10 @@ export default function Newsmaqolamuallif(props) {
             fill="white"
           />
         </svg>
-        Manba: <a href={newsItem.link} target="_blank">{newsItem.nameLink}</a>
+        Manba:{" "}
+        <a href={newsItem.link} target="_blank">
+          {newsItem.nameLink}
+        </a>
       </div>
     </div>
   );

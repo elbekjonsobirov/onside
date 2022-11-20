@@ -1,6 +1,6 @@
 import React from "react";
 import "./ClubsStatic.css";
-import MatchSwapper from "./MatchSwapper";
+// import MatchSwapper from "./MatchSwapper";
 import RightIcon from "../svg/Vector (Stroke) (3).svg";
 
 // Material ui

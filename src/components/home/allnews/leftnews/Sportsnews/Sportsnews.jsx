@@ -50,7 +50,7 @@ export default function Sportsnews() {
       <div className="swUchNews">
         {sportNewsAll.map((item, index) => (
           <div onClick={() => {
-            navigate(`/${item.categoryId}/${index}`);
+            navigate(`/4/${index}`);
           }} className="swUchItems" key={index}>
             <div
               className="swuchItemBgImg"

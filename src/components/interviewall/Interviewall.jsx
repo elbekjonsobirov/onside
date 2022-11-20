@@ -207,7 +207,7 @@ export default function Interviewall() {
                 navigate(`/9/${index}`);
               }}
                 className="intItem"
-                style={{ backgroundImage: `url(${intItemImg})` }}
+                style={{ backgroundImage: `url(${item.image.url})` }}
               >
                 <div className="intItemAbout">
                   <h1 className="intAboutTitle">
@@ -224,7 +224,7 @@ export default function Interviewall() {
                       >
                         <circle cx="3.5" cy="3.5" r="3.5" fill="#21D5EE" />
                       </svg>
-                      <h4 className="intAboutSubCat">Jahon chempionati</h4>
+                      <h4 className="intAboutSubCat">{item.subCategory.name}</h4>
                     </div>
                     <Rating
                       className="intAboutRating"

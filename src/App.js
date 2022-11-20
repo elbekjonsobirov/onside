@@ -18,67 +18,35 @@ import Search from "./components/search/Search";
 import Gallerypage from "./components/gallerypage/Gallerypage";
 import axios from "axios";
 import Championatlogo from "./components/championatlogo/Championatlogo";
-import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 function App() {
-  const { categoryId } = useParams();
   const navigate = useNavigate();
   window.scrollTo(0, 0)
-  const [UrlLogo] = useState([
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-  ]);
   function NavActive(id) {
     const UlActiveArr = document.querySelector(".UlActive"),
       UlActive = UlActiveArr.querySelectorAll("li");
     UlActive.forEach((item) => item.classList.remove("navActive"));
-    if (id == '/category/4') {
+    if (id === '/category/4') {
       UlActive[4].classList.add("navActive");
-    } else if (id  == '/category/2') {
+    } else if (id  === '/category/2') {
       UlActive[2].classList.add("navActive");
-    } else if (id  == '/gallery') {
+    } else if (id  === '/gallery') {
       UlActive[6].classList.add("navActive");
     }
      else {
       UlActive.forEach((item) => item.classList.remove("navActive"));
     }
   }
+
+
   // Loader function
 
   const [load, setLoad] = useState(false)
 
   window.addEventListener("click", function (event) {
-    let itemId = event.target.id;
-    let itemClass = event.target;
+    // let itemId = event.target.id;
+    // let itemClass = event.target;
     
     // Top Match
   // let btnArr = document.querySelectorAll(".tranLink");
@@ -126,7 +94,6 @@ function App() {
   // Navbar Active
   });
 
-  const [items, setItems] = useState("");
   const [clubLogo, setClubLogo] = useState([])
 
   useEffect(() => {
@@ -169,9 +136,9 @@ function App() {
           />
         </svg>
         <div className="club_logos">
-          {clubLogo.map((item) => (
-            <a href={item.link}>
-              <img src={item.image.url} />
+          {clubLogo.map((item, index) => (
+            <a href={item.link} key={index}>
+              <img src={item.image.url} alt="logo"/>
             </a>
           ))}
         </div>

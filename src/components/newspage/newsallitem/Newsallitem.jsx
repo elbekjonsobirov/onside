@@ -6,13 +6,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default function Newsallitem() {
-  const [value] = useState(2);
+  let DateDay = new Date()
   const navigate = useNavigate();
-  const [mapArr] = useState([{}]);
-  const [test] = useState(
-    "Feliks dubl bilan Atletiko Real Betis ustidan g'alaba qo svdnkjdvndf skljvndskvjns dvjksdv bbfbcxbxcbxcbnkjvdnsd vkjnsdvsdjk dsnzondi..."
-  );
-
   const [newsAll, setNewsAll] = useState([]);
   useEffect(() => {
     const newsAllFunc = async () => {
@@ -44,11 +39,20 @@ export default function Newsallitem() {
               style={{
                 backgroundImage: `url(${item.image.url})`,
               }}
-            ></div>
+            >
+              <h6 className="NewsData">
+                  <span>
+                  {DateDay.getDate() === +item.publishedAt.slice(0, 2) ? "" : item.publishedAt.slice(5, 10)}
+                  </span>
+                  <span>
+                  {item.publishedAt.slice(11, 16)}
+                  </span>
+                  </h6>
+            </div>
             <div className="newsAllAbout">
               <div className="newsAllReyting">
                 <a href="/" className="newsAllTag">
-                  Chempionlar ligasi
+                  {item.category.name}
                 </a>
                 <Rating
                   className="newsAllRat"

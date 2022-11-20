@@ -65,7 +65,7 @@ export default function Blog() {
         {blogAllItem.map((item, index) => (
           <SwiperSlide>
             <div onClick={() => {
-                navigate(`2/${index}`);
+                navigate(`/2/${index}`);
               }}>
               <div className="swIKkiImgCard">
                 <div
