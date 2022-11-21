@@ -8,7 +8,7 @@ export default function Championatlogo() {
 
     useEffect(() => {
         const chamLogoFunc = async () => {
-            const chamLogoApi = await axios.get('https://185.196.213.14:3001/chempionships')
+            const chamLogoApi = await axios.get('https://onside-sport.uz/api/chempionships')
             setChamLogo(chamLogoApi.data)
         }
 

@@ -13,24 +13,11 @@ export default function Newsmavoid() {
   const navigate = useNavigate();
   const { categoryId } = useParams();
   const [newsItem, setNewsItem] = useState([])
-  const [dataVal, setDataVal] = useState('')
   
   useEffect(() => {
-    if (+categoryId === 2) {
-      setDataVal('BLOG')
-    } else if (+categoryId === 7) {
-      setDataVal('COMMON')
-    } else if (+categoryId === 4) {
-      setDataVal('SPORT')
-    } else if (+categoryId === 8) {
-      setDataVal('PHOTO')
-    } else if (+categoryId === 9) {
-      setDataVal('INTERVIEW')
-    }
-
-   axios.get(`https://185.196.213.14:3001/news/byType?type=${dataVal}&page=1&limit=25`)
+   axios.get(`https://185.196.213.14:3001/news/byType?type=${categoryId}&page=1&limit=25`)
         .then(res=>setNewsItem(res.data.data))
-  },[categoryId, dataVal])
+  },[categoryId])
 
   return (
     <div className="newsMavOid">

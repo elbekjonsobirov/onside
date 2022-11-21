@@ -11,7 +11,7 @@ export default function Slider() {
   const [newsData, setNewsData] = useState([]);
 
   useEffect(() => {
-    fetch(`https://185.196.213.14:3001/sliders`)
+    fetch(`https://onside-sport.uz/api/sliders`)
       .then((response) => response.json())
       .then((data) => setNewsData(data));
   },[]);
@@ -35,8 +35,8 @@ export default function Slider() {
           <SwiperSlide key={index}>
             <a
             href={item.link}
-            rell="_blank"
-              className="swapItem"
+            target="_blank"
+              className="swapItem" rel="noreferrer"
             >
               <div
                 className="swapperItemImg"

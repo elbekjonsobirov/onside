@@ -15,7 +15,7 @@ export default function Latesnew() {
 
   useEffect(() => {
     const latFunc = async () => {
-      const latItem = await axios.get('https://185.196.213.14:3001/news/byType?type=COMMON&page=1&limit=25')
+      const latItem = await axios.get('https://onside-sport.uz/api/news/byType?type=COMMON&page=1&limit=25')
       setLatNewsAll(latItem.data.data);
     }
 

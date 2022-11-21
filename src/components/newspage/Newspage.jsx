@@ -12,32 +12,26 @@ export default function Newspage() {
   const { newsPageUrl } = window.location.href;
 
   const [newsItem, setNewsItem] = useState([]);
-  const [newValItem, setNewsValItem] = useState('')
 
   useEffect(() => {
 
-    if (+categoryId === 2) {
-      setNewsValItem('BLOG')
+    if (categoryId === 'BLOG') {
       setNewsUrlName("bloglar");
-    } else if (+categoryId === 7) {
-      setNewsValItem('COMMON')
+    } else if (categoryId === 'COMMON') {
       setNewsUrlName("So‘ngi yangiliklar");
-    } else if (+categoryId === 4) {
-      setNewsValItem('SPORT')
+    } else if (categoryId === 'SPORT') {
       setNewsUrlName("sport yangiliklari");
-    } else if (+categoryId === 8) {
-      setNewsValItem('PHOTO')
+    } else if (categoryId === 'PHOTO') {
       setNewsUrlName("Galeriya");
-    } else if (+categoryId === 9) {
-      setNewsValItem('INTERVIEW')
+    } else if (categoryId === 'INTERVIEW') {
       setNewsUrlName("Interviyular");
     }
     axios
       .get(
-        `https://185.196.213.14:3001/news/byType?type=${newValItem}&page=1&limit=25`
+        `https://onside-sport.uz/api/news/byType?type=${categoryId}&page=1&limit=25`
       )
       .then((res) =>setNewsItem(res.data.data[id]));
-  }, [newValItem, categoryId, id]);
+  }, [categoryId, id]);
 
   return (
     <div className="newsPage">

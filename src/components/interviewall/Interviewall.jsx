@@ -199,7 +199,7 @@ export default function Interviewall() {
             {interNewsAll.map((item, index) => (
               <div
               onClick={() => {
-                navigate(`/9/${index}`);
+                navigate(`/INTERVIEW/${index}`);
               }}
                 className="intItem"
                 style={{ backgroundImage: `url(${item.image.url})` }}

@@ -27,7 +27,7 @@ function App() {
     const UlActiveArr = document.querySelector(".UlActive"),
       UlActive = UlActiveArr.querySelectorAll("li");
     UlActive.forEach((item) => item.classList.remove("navActive"));
-    if (id === "/category/4") {
+    if (id === "/category/COMMON") {
       UlActive[4].classList.add("navActive");
     } else if (id === "/category/2") {
       UlActive[2].classList.add("navActive");
@@ -108,13 +108,8 @@ function App() {
   useEffect(() => {
     const loadUsers = async () => {
       setLoad(true);
-      const response = await axios({
-        method: "get",
-        url: "https://185.196.213.14:3001/news/byType?type=COMMON&page=1&limit=25",
-        withCredentials: false,
-      });
       const clubApi = await axios({
-        url: "https://185.196.213.14:3001/clubs",
+        url: "https://onside-sport.uz/api/clubs",
         method: "get",
         withCredentials: false,
       });

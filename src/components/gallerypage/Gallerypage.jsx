@@ -22,7 +22,7 @@ export default function Gallerypage() {
           {galleryItem.map((item, index) => (
           <div
           onClick={() => {
-            navigate(`/8/${index}`);
+            navigate(`/PHOTO/${index}`);
           }}
             className="galleryPageItem"
             style={{ backgroundImage: `url(${item.image.url})` }}

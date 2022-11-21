@@ -12,7 +12,7 @@ export default function Sportsnews() {
 
   useEffect(() => {
     const sportNewsFunc = async () => {
-      const sportNewsItem = await axios.get('https://185.196.213.14:3001/news/byType?type=SPORT&page=1&limit=25')
+      const sportNewsItem = await axios.get('https://onside-sport.uz/api/news/byType?type=SPORT&page=1&limit=25')
       setSportNewsAll(sportNewsItem.data.data);
     }
 
