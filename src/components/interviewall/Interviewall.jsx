@@ -5,7 +5,6 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Rating from "@mui/material/Rating";
 import { Link } from "react-router-dom";
-import intItemImg from "../Imgs/news-image.jpg";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -16,10 +15,6 @@ export default function Interviewall() {
   const handleChange = (event) => {
     setAge(event.target.value);
   };
-
-  const [intTest] = useState([
-    {}
-  ]);
 
   const [interNewsAll, setInterNewsAll] = useState([])
 

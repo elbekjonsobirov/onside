@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import galleryImg from "../../Imgs/news-image.jpg";
 import RightIcon from "../svg/Vector (Stroke) (3).svg";
 import "./GalleryCard.css";
 import { Link, useNavigate } from "react-router-dom";
@@ -31,7 +30,7 @@ export default function GalleryCard() {
         {galleryNewsAll.map((item, index) => (
           <div
             onClick={() => {
-              navigate(`/8/${index}`);
+              navigate(`/PHOTO/${index}`);
             }}
             className="galleryitem"
             key={index}

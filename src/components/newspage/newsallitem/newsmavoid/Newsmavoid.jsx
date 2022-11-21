@@ -30,7 +30,7 @@ export default function Newsmavoid() {
 
    axios.get(`http://185.196.213.14:3001/news/byType?type=${dataVal}&page=1&limit=25`)
         .then(res=>setNewsItem(res.data.data))
-  },[dataVal])
+  },[categoryId, dataVal])
 
   return (
     <div className="newsMavOid">

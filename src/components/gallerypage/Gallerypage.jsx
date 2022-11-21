@@ -1,12 +1,10 @@
 import React, {useEffect, useState} from "react";
 import "./Gallerypage.css";
-import {useParams } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export default function Gallerypage() {
   const navigate = useNavigate();
-  const {galleryPageUrl} = window.location.href
   const [galleryItem, setGalleryItem] = useState([])
   const galleryItemFunc = async () => {
     const galleryItemApi = await axios.get(`http://185.196.213.14:3001/news/byType?type=PHOTO&page=1&limit=25`)

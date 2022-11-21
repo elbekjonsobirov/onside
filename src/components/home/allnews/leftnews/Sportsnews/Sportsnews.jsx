@@ -25,7 +25,7 @@ export default function Sportsnews() {
         <div className="go-frame">
           <div
             onClick={() => {
-              navigate(`/category/4`);
+              navigate(`/category/SPORT`);
             }}
             className="swUchBarchaUrl"
           >
@@ -50,7 +50,7 @@ export default function Sportsnews() {
       <div className="swUchNews">
         {sportNewsAll.map((item, index) => (
           <div onClick={() => {
-            navigate(`/4/${index}`);
+            navigate(`/SPORT/${index}`);
           }} className="swUchItems" key={index}>
             <div
               className="swuchItemBgImg"

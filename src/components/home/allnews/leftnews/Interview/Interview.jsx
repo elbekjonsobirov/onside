@@ -34,7 +34,7 @@ export default function Interview() {
         <h1 className="swTortTitle">INTERVYULAR</h1>
         <div
           onClick={(item) => {
-            navigate(`/category/interview`);
+            navigate(`/category/INTERVIEW`);
           }}
           className="swTortBarchaUrl"
         >
@@ -71,7 +71,7 @@ export default function Interview() {
         {interNewsAll.map((item, index) => (
           <SwiperSlide
             onClick={() => {
-              navigate(`/9/${index}`);
+              navigate(`/INTERVIEW/${index}`);
             }}
             className="swTortItems"
             key={index}

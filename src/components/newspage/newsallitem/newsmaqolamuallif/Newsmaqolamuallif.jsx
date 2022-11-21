@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React  from "react";
 import "./Newsmaqolamuallif.css";
 import image from "../../../Imgs/Muharir.jpg";
 
@@ -7,7 +7,7 @@ export default function Newsmaqolamuallif({ newsItem }) {
 
   return (
     <div className="newsMaqMul">
-      <a href="" className="maqolaMuallifCard">
+      <a href="/" className="maqolaMuallifCard">
         <img src={image} alt="" />
         Muharir:{" "}
         <span className="authorName">{`${newsItem.length === 0 ? "": newsItem.author.name } ${newsItem.length === 0 ? "": newsItem.author.surname}`}</span>
@@ -34,7 +34,7 @@ export default function Newsmaqolamuallif({ newsItem }) {
           />
         </svg>
         Manba:{" "}
-        <a href={newsItem.link} target="_blank">
+        <a href={newsItem.link} rell="_blank">
           {newsItem.nameLink}
         </a>
       </div>

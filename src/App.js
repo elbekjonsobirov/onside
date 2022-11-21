@@ -33,7 +33,10 @@ function App() {
       UlActive[2].classList.add("navActive");
     } else if (id === "/gallery") {
       UlActive[6].classList.add("navActive");
-    } else {
+    } else if (id === "/category/1") {
+      UlActive[1].classList.add("navActive");
+    }
+    else {
       UlActive.forEach((item) => item.classList.remove("navActive"));
     }
   }

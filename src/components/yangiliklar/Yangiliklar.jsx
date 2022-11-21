@@ -23,31 +23,27 @@ export default function Yangiliklar() {
 
   const { pageURL } = window.location.href;
   const [urlName, setUrlName] = useState("");
-  const [categoryName, setCategoryName] = useState("");
   const [yangNewsAll, setYangNewsAll] = useState([]);
   // const [dataNews, setDataNews] = useState([])
-
+  
   useEffect(() => {
+    editUrl(id);
     function editUrl(id) {
-      if (+id === 2) {
+      if (id === "BLOG") {
         setUrlName("bloglar");
-        setCategoryName("BLOG");
-      } else if (+id === 4) {
-        setCategoryName("SPORT");
+      } else if (id === "SPORT" || id === "SPORT") {
         setUrlName("Sport yangiliklari");
-      } else if (+id === 7) {
-        setCategoryName("COMMON");
+      } else if (id === "COMMON") {
         setUrlName("So‘ngi yangiliklar");
       }
     }
-
+    
     axios
       .get(
-        `http://185.196.213.14:3001/news/byType?type=${categoryName}&page=1&limit=25`
+        `http://185.196.213.14:3001/news/byType?type=${id}&page=1&limit=25`
       )
       .then(res => setYangNewsAll(res.data.data));
-    editUrl(id);
-  }, [categoryName]);
+  }, [id]);
 
   return (
     <div className="yangPage">

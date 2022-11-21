@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./Newsallitem.css";
-import newsAllImg from "../../Imgs/news-image.jpg";
 import Rating from "@mui/material/Rating";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";

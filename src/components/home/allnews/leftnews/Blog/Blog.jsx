@@ -8,7 +8,6 @@ import "./Blog.css";
 import { Grid, Pagination, Scrollbar } from "swiper";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import swIkkiImg from "../../../../Imgs/news-image.jpg";
 
 export default function Blog() {
   const navigate = useNavigate();
@@ -28,7 +27,7 @@ export default function Blog() {
         <h1 className="swapperIkkiTitle">BLOGLAR</h1>
         <div
           onClick={() => {
-            navigate(`/category/2`);
+            navigate(`/category/BLOG`);
           }}
           className="swIkkiBarchaUrl"
         >
@@ -65,7 +64,7 @@ export default function Blog() {
         {blogAllItem.map((item, index) => (
           <SwiperSlide>
             <div onClick={() => {
-                navigate(`/2/${index}`);
+                navigate(`/BLOG/${index}`);
               }}>
               <div className="swIKkiImgCard">
                 <div

@@ -5,8 +5,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./Slider.css";
 import { Autoplay, Pagination, Navigation } from "swiper";
-import swapImg from "../../../../Imgs/news-image.jpg";
-import {Link} from 'react-router-dom'
 
 export default function Slider() {
 
@@ -37,7 +35,7 @@ export default function Slider() {
           <SwiperSlide key={index}>
             <a
             href={item.link}
-            target="_blank"
+            rell="_blank"
               className="swapItem"
             >
               <div

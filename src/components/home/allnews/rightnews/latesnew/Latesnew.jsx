@@ -21,16 +21,13 @@ export default function Latesnew() {
 
     latFunc()
   },[])
-  let hiyTech = (index, item)=>{
-    navigate(`/7/${index}`);
-  }
   return (
     <div className="latNewsPage">
       <div className="latTitleCard">
         <h1 className="latTitle">So‘ngI yangiliklar</h1>
         <div
           onClick={() => {
-            navigate(`/category/7`);
+            navigate(`/category/COMMON`);
           }}
           className="latBarchaUrl"
         >
@@ -182,7 +179,7 @@ export default function Latesnew() {
         {latNewsAll.map((item, index) => (
           <div key={index}>
             <div
-              onClick={()=>hiyTech(index, item)}
+              onClick={() => navigate(`/COMMON/${index}`)}
               className="latNewsItem"
             >
               <div className="latNewsImgCard" style={{backgroundImage: `url(${item.image.url})`}}>
