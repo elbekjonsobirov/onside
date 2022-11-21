@@ -15,7 +15,7 @@ export default function Blog() {
 
   useEffect(() => {
     const blogFunc = async () => {
-      const blogItem = await axios.get('http://185.196.213.14:3001/news/byType?type=BLOG&page=1&limit=25')
+      const blogItem = await axios.get('https://185.196.213.14:3001/news/byType?type=BLOG&page=1&limit=25')
       setBlogAllItem(blogItem.data.data)
     }
 

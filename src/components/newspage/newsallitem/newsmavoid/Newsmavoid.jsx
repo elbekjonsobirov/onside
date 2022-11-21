@@ -28,7 +28,7 @@ export default function Newsmavoid() {
       setDataVal('INTERVIEW')
     }
 
-   axios.get(`http://185.196.213.14:3001/news/byType?type=${dataVal}&page=1&limit=25`)
+   axios.get(`https://185.196.213.14:3001/news/byType?type=${dataVal}&page=1&limit=25`)
         .then(res=>setNewsItem(res.data.data))
   },[categoryId, dataVal])
 

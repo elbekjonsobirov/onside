@@ -21,7 +21,7 @@ export default function Interview() {
 
   useEffect(() => {
     const interNewsFunc = async () => {
-      const sportNewsItem = await axios.get('http://185.196.213.14:3001/news/byType?type=INTERVIEW&page=1&limit=25')
+      const sportNewsItem = await axios.get('https://185.196.213.14:3001/news/byType?type=INTERVIEW&page=1&limit=25')
       setInterNewsAll(sportNewsItem.data.data);
     }
 

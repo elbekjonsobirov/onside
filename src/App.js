@@ -94,9 +94,9 @@ function App() {
   //   const loadUsers = async () => {
   //     setLoad(true);
   //     const response = await axios.get(
-  //       "http://185.196.213.14:3001/news/byType?type=COMMON&page=1&limit=25"
+  //       "https://185.196.213.14:3001/news/byType?type=COMMON&page=1&limit=25"
   //     );
-  //     const clubApi = await axios.get('http://185.196.213.14:3001/clubs')
+  //     const clubApi = await axios.get('https://185.196.213.14:3001/clubs')
   //     setClubLogo(clubApi.data);
   //     setLoad(false);
   //   };
@@ -110,11 +110,11 @@ function App() {
       setLoad(true);
       const response = await axios({
         method: "get",
-        url: "http://185.196.213.14:3001/news/byType?type=COMMON&page=1&limit=25",
+        url: "https://185.196.213.14:3001/news/byType?type=COMMON&page=1&limit=25",
         withCredentials: false,
       });
       const clubApi = await axios({
-        url: "http://185.196.213.14:3001/clubs",
+        url: "https://185.196.213.14:3001/clubs",
         method: "get",
         withCredentials: false,
       });

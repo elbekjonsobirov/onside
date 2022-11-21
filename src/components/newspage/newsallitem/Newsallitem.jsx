@@ -11,7 +11,7 @@ export default function Newsallitem() {
   useEffect(() => {
     const newsAllFunc = async () => {
       const newsAllItem = await axios.get(
-        "http://185.196.213.14:3001/news/byType?type=COMMON&page=1&limit=25"
+        "https://185.196.213.14:3001/news/byType?type=COMMON&page=1&limit=25"
       );
       setNewsAll(newsAllItem.data.data);
     };

@@ -20,7 +20,7 @@ export default function Interviewall() {
 
   useEffect(() => {
     const interFunc = async () => {
-      const interItem = await axios.get('http://185.196.213.14:3001/news/byType?type=INTERVIEW&page=1&limit=25')
+      const interItem = await axios.get('https://185.196.213.14:3001/news/byType?type=INTERVIEW&page=1&limit=25')
       setInterNewsAll(interItem.data.data);
     }
 

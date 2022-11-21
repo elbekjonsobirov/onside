@@ -11,7 +11,7 @@ export default function Slider() {
   const [newsData, setNewsData] = useState([]);
 
   useEffect(() => {
-    fetch(`http://185.196.213.14:3001/sliders`)
+    fetch(`https://185.196.213.14:3001/sliders`)
       .then((response) => response.json())
       .then((data) => setNewsData(data));
   },[]);

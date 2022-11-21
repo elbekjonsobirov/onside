@@ -10,7 +10,7 @@ export default function GalleryCard() {
 
   useEffect(() => {
     const galleryFunc = async () => {
-      const galleryItem = await axios.get('http://185.196.213.14:3001/news/byType?type=PHOTO&page=1&limit=25')
+      const galleryItem = await axios.get('https://185.196.213.14:3001/news/byType?type=PHOTO&page=1&limit=25')
       setGalleryNewsAll(galleryItem.data.data);
     }
 

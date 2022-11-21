@@ -34,7 +34,7 @@ export default function Newspage() {
     }
     axios
       .get(
-        `http://185.196.213.14:3001/news/byType?type=${newValItem}&page=1&limit=25`
+        `https://185.196.213.14:3001/news/byType?type=${newValItem}&page=1&limit=25`
       )
       .then((res) =>setNewsItem(res.data.data[id]));
   }, [newValItem, categoryId, id]);

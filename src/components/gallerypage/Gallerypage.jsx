@@ -7,7 +7,7 @@ export default function Gallerypage() {
   const navigate = useNavigate();
   const [galleryItem, setGalleryItem] = useState([])
   const galleryItemFunc = async () => {
-    const galleryItemApi = await axios.get(`http://185.196.213.14:3001/news/byType?type=PHOTO&page=1&limit=25`)
+    const galleryItemApi = await axios.get(`https://185.196.213.14:3001/news/byType?type=PHOTO&page=1&limit=25`)
     setGalleryItem(galleryItemApi.data.data);
   }
   

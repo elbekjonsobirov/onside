@@ -40,7 +40,7 @@ export default function Yangiliklar() {
     
     axios
       .get(
-        `http://185.196.213.14:3001/news/byType?type=${id}&page=1&limit=25`
+        `https://185.196.213.14:3001/news/byType?type=${id}&page=1&limit=25`
       )
       .then(res => setYangNewsAll(res.data.data));
   }, [id]);
